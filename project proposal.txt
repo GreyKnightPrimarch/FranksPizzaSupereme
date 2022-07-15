@@ -1,0 +1,12 @@
+This project is meant to emulate a unique style of pizza ordering and creation of a fictional Pizza shop called Frank’s Supreme Pizzas.
+
+Current backload:
+1.	Create a method for random pizza generation
+2.	Create a Favorite Pizza view
+3.	Create a Past order View
+4.	Upper navigational menu
+5.	(possible) order confirm
+6.	HTML CSS
+Wire frame may change but based on the attached/
+
+Repo storage: GreyKnightPrimarch/FranksPizzaSupreme: Meme Pizzas from Franks (Disclaimer: meant to be soley a fun coding project) (github.com)

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tbstyles.css') }}">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="messages">
+        {% with messages = get_flashed_messages() %}
+        {%if messages %}
+        {% for m in messages %}
+        <h5>{{m}}</h5>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+    <div class="Header">
+        <h2>Frank's Pizza Supreme</h2>
+        <nav>
+            {% block menu %} {% include 'menu.html' %} {% endblock menu %}
+        </nav>
+    </div>
+    <div>
+        <div class="titlebar">
+
+        </div>
+        <div class="columns">
+            <div>
+                <form action="/CraftAPizza_normal" method="post" class="inline">
+                    <button type="submit" class="submit-button">New Order</button>
+                </form>
+            </div>
+            <div>
+                <form action="/ReOrder" method="post" class="inline">
+                    <button type="submit" class="submit-button">Re-Order my fave</button>
+                </form>
+            </div>
+            <div>
+                <form action="/RandPizza" method="post" class="inline">
+                    <button type="submit" class="submit-button">Surprise me</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>

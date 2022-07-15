@@ -1,0 +1,28 @@
+INSERT INTO ingredient(`Name`,`Description`,`Type`,baseprice) 
+VALUES('Pepperoni','standard topping','meat',1.58),
+('Steak','high end topping','meat',5.90),
+('onions','standard vegatable topping','vegetable',0.78),
+('celery','weird vegatable topping','vegetable',0.48),
+('mushroom','standard vegatable topping','vegetable',0.88),
+('portabello','standard vegatable topping','vegetable',1.02),
+('Sausage','standard topping','meat',1.78);
+
+
+INSERT INTO sizes(`Name`,`Description`,`Diameter`) 
+VALUES
+('Childpersonal','single meal for one',4.1),
+('Adultpersonal','meal for one',6.3),
+('small','feeds two',9.0),
+('medium','feeds 3-4',12.1),
+('Large','feeds 4-6',14.4),
+('XtraLarge','feeds 6-8',18.5),
+('SoBig','feeds8+',20.2);
+
+INSERT INTO crusttypes(`Name`,`Description`,`Type`,baseprice) 
+VALUES('flourbread','standard','basic',0.59),
+('glutenfree','glutenfree base made from rice flour','glutenfree',2.00),
+('artichoke','glutenfree base made from artichoke flour','vegetable',3.10),
+('celery','glutenfree base made from artichoke celery','vegetable',2.90),
+('sourdough','standard sourdough','basic',0.88),
+('flatbread','standard flatbread','basic',0.75),
+('cheescrust','flour dough with mozzerlla cheese crust','cheese',1.78);

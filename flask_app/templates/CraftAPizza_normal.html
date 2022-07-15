@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tbstyles.css') }}">
+    <script src="{{ url_for('static', filename='js/newPizza.js') }}"></script>
+    <title>Dashboard</title>
+
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+    </script>
+    <div class="messages">
+
+        {% with messages = get_flashed_messages() %}
+        {%if messages %}
+        {% for m in messages %}
+        <h5>{{m}}</h5>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+    <div class="Header">
+        <h2>Frank's Pizza Supreme</h2>
+        <nav>
+            {% block menu %} {% include 'menu.html' %} {% endblock menu %}
+        </nav>
+    </div>
+    <div>
+        <form action="/OrderPizzaPost" method="post">
+            <h3>Craft-A-PIZZA</h3>
+            <div class=Method>
+                <label for="carrymethod">Method: </label>
+                <select name="carrymethod" id="carrymethod">
+                    <option value="CarryOut">CarryOut</option>
+                    <option value="Delivery">Delivery</option>
+                    <option value="DineIn">Dine In</option>
+                </select>
+            </div>
+            <div class="specs">
+                <div>
+                    <label for="Size">Size: </label>
+                    <select name="Size" id="Size" onchange="getValueOfSize(this)">
+                        {% for siz in Sizes %}
+                        {% with  siz2 = {"Type":siz.Diameter, "Name":siz.Name, "ID":siz.SizeID, "Multiplier":siz.Multiplier} %}
+                        <option value="{{siz2}}" id="{{siz.SizeID}}">{{siz.Name}} <span>:{{ siz.Diameter }}</span>
+                        </option>
+                        {% endwith %}
+                        {% endfor %}
+                    </select>
+                    <label for="Sizeout">Price: </label>
+                    <input type="text" disabled id="Sizeout" value="1" />
+                </div>
+                <div>
+                    <label for="Crust">Crust: </label>
+                    <select name="Crust" id="Crust" onchange="getValueOfCrust(this)">
+                        {% for cr in Crusts %}
+                        {% with cr2 = "a"+(cr.CrustID|string) %}
+                        {% with  cr3 = {"Type":cr.Type, "Name":cr.Name, "ID":cr.CrustID, "price":cr.baseprice} %}
+                        <option value="{{cr3}}" id="{{cr2}}">{{cr.Name}} <span>:{{ cr.Type }}</span></option>
+                        <label hidden></span>
+                            {% endwith %}
+                            {% endwith %}
+                            {% endfor %}
+                    </select>
+                    <label for="Crustout">Price: </label>
+                    <input type="text" disabled id="Crustout" value=".59" />
+                </div>
+                <label for="Qty">Qty: </label>
+                <input type="number" id="Qty" name="Pizzas" value="1" min="1" max="10">
+            </div>
+            <div>
+                <label for="NameP">Name The Pizza: </label>
+                <input type="text" id="NameP" name="NameP">
+            </div>
+            <div>
+                <label for="DescP">Describe The Pizza: </label>
+                <input type="text" id="NameP" name="DescP">
+            </div>
+
+            <div class="ingredientBox">
+
+                <table>
+                    <th>
+
+                    <td>Ingredient</td>
+                    <td>qty</td>
+                    <td>Base Price</td>
+                    <td>Total Price</td>
+                    </th>
+                    {% for num1 in range(0, rCount) %}
+                    <tr>
+                        <td></td>
+                        <td>
+                            <label for="{{li[num1]}}">{{li[num1].Name}}</label>
+
+                        </td>
+                        <td>
+                            <label for="{{qt[num1]}}"></label>
+                            <input type="number" id="{{li[num1].Name}}" min="0" max="5" value="0"
+                                onchange="UpdateVal(this)" name="{{li[num1].Name}}">
+                        </td>
+                        <td>
+                            <label id="{{'B'+li[num1].Name}}">{{li[num1].baseprice}}</label>
+                        </td>
+                        <td>
+                            <label id="{{'S'+li[num1].Name}}">0</label>
+                        </td>
+
+                    </tr>
+                    {% endfor %}
+                </table>
+                <label for="">Total: </label>
+                <label id="Total" for="">0</label>
+                <div>
+                    <button type="submit">Order Pizza</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>

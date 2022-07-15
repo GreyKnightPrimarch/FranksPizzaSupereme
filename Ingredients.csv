@@ -1,0 +1,11 @@
+"IngredientID";"Name";"UpdatedAt";"CreatedAt";"Description";"Type";"baseprice"
+1;"Pepperoni";"2022-06-12 22:15:59";"2022-06-12 22:15:59";"standard topping";"meat";1.58
+2;"Steak";"2022-06-12 22:15:59";"2022-06-12 22:15:59";"high end topping";"meat";5.9
+3;"onions";"2022-06-12 22:15:59";"2022-06-12 22:15:59";"standard vegatable topping";"vegetable";0.78
+4;"celery";"2022-06-12 22:15:59";"2022-06-12 22:15:59";"weird vegatable topping";"vegetable";0.48
+5;"mushroom";"2022-06-12 22:15:59";"2022-06-12 22:15:59";"standard vegatable topping";"vegetable";0.88
+6;"portabello";"2022-06-12 22:15:59";"2022-06-12 22:15:59";"standard vegatable topping";"vegetable";1.02
+7;"Sausage";"2022-06-12 22:15:59";"2022-06-12 22:15:59";"standard topping";"meat";1.78
+8;"Mozzarella cheese";"2022-07-03 18:19:09";"2022-07-03 18:19:09";"Mozzarella cheese, shredded";"cheese";1.0
+9;"Colby jack";"2022-07-03 18:19:09";"2022-07-03 18:19:09";"Colby Jack, shredded";"cheese";0.76
+10;"parmesan";"2022-07-03 18:19:09";"2022-07-03 18:19:09";"parmesan, crumble";"cheese";0.74

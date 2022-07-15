@@ -1,0 +1,5 @@
+"ID";"FirstName";"LastName";"PassWordHash";"CreatedAt";"UpdatedAt";"Email";"Address";"City";"State";"ZIP"
+1;"asdf";"asdf";"$2b$12$EJVBQ5jucs2CFndxHPLqP.1CNyGGXscla30J00EG8YtTxQ7m1eNaG";"2022-06-12 21:22:19";"2022-06-12 21:22:19";"asdf@asdf.com";"12345";"asdf";"CA";"12345"
+2;"asdf";"asdf";"$2b$12$2JHbDPJWCt//ci.zNlTLpeJC2V9J/d5YEW03lZATBP9g.4.g11L8.";"2022-06-28 20:49:41";"2022-06-28 20:49:41";"asdf@gmail.com";"asdf123";"asdf";"CA";"12345"
+3;"asdf";"asdf";"$2b$12$szihjkUwgVR1qEP0zoUiWeNfGVQd3GO4jDp.MSv374RoX30ePTBVm";"2022-06-28 20:52:09";"2022-06-28 20:52:09";"asdf2@gmail.com";"asdf123";"asdf";"CA";"12345"
+4;"asdf";"asdf";"$2b$12$oTz6u94PNQKCj9oXuWJCkOUuOKAp4YO.PamAi6ycAokq65jstiQ7C";"2022-06-28 20:54:13";"2022-06-28 20:54:13";"asdf3@gmail.com";"asdf123";"asdf";"CA";"12345"

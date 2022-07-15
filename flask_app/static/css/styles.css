@@ -1,0 +1,17 @@
+.stack {
+  height: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.top-h1 {
+  color: #E8E8E8;
+  font-size: 60px;
+}
+
+.email-form {
+  color: white;
+  font-size: 30px;
+}
